@@ -1,0 +1,19 @@
+::selection {   
+    background: orange;
+  }
+  .curs {
+      border: 2px outset;
+      padding: 2%;
+  }
+  .div_curs {
+    color: black;
+    text-decoration: none;
+
+    padding: 1%;
+  }
+  .curs:hover{
+    border-color: orange;
+  }
+  .curs:hover .titol_curs{
+    color: orange;
+  }

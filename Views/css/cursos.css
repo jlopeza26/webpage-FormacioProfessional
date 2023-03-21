@@ -1,0 +1,29 @@
+.content {
+  margin: 1rem;
+}
+
+#reserva {
+  color: #EFEFEF;
+  background-color: rgb(73, 73, 73);
+  border-radius: 2%;
+}
+
+#reserva:hover {
+  color: #EFEFEF;
+  background-color: orange;
+  border-radius: 2%;
+}
+
+::selection {   
+  background: orange;
+}
+
+#plDispo{
+  font-weight:bold;
+  color:orange;
+  float: right;
+  margin-top: -1.25rem;
+}
+#plDispo::selection{
+  background: black;
+}

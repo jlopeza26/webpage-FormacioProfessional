@@ -1,0 +1,16 @@
+.gradient-custom {
+    background: #212529;
+}
+.card-body{
+    background-color: orange;   
+    border-radius: 20px;
+}
+.form-label{
+    color: #212529;
+}
+.text-uppercase{
+    color: #212529;
+}
+input{
+    border-color: #212529;;
+}

@@ -1,0 +1,25 @@
+/* Estilos para el formulario */
+.form-container {
+	max-width: 500px; /* Ancho máximo del formulario */
+	margin: auto; /* Centrar el formulario horizontalmente */
+	padding: 20px; /* Espaciado interno del formulario */
+	background-color: #f2f2f2; /* Color de fondo del formulario */
+	border-radius: 10px; /* Bordes redondeados del formulario */
+}
+  
+/* Estilos para el input file */
+input[type="file"] {
+display: block; /* Mostrar el input file como bloque */
+margin-bottom: 20px; /* Espaciado inferior del input file */
+}
+
+/* Estilos para el botón de submit */
+input[type="submit"] {
+background-color: #4CAF50; /* Color de fondo del botón */
+color: white; /* Color del texto del botón */
+border: none; /* Sin borde en el botón */
+padding: 10px 20px; /* Espaciado interno del botón */
+border-radius: 5px; /* Bordes redondeados del botón */
+cursor: pointer; /* Cursor al pasar por encima del botón */
+}
+
