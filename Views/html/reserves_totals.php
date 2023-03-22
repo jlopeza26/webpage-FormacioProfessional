@@ -54,6 +54,7 @@
     </section>
 
     <script src="../js/enviarCorreu.js"></script>
+    <script src="../js/ajax_dades_usuari.js"></script>
     <script>
       function mostrarForm() {
         document.getElementById("formEnviarCorreu").style.display = "block";

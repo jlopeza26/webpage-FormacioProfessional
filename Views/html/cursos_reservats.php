@@ -43,10 +43,5 @@
             include ('../../Controller/Reserva/ControllerCursosReservats.php');
           ?>
     </section>
-        
-
-
-
-
 </body>
 </html>
