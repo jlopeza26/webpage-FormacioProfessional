@@ -6,10 +6,12 @@ function validateForm() {
   var username = document.getElementById("username").value;
   var nom = document.getElementById("nom").value;
   var cognom = document.getElementById("cognom").value;
+  var telf = document.getElementById("numTelf").value;
 
   let emailValid =/^(([^<>()\[\]\.,;:\s@\”]+(\.[^<>()\[\]\.,;:\s@\”]+)*)|(\”.+\”))@(([^<>()[\]\.,;:\s@\”]+\.)+[^<>()[\]\.,;:\s@\”]{2,4})$/
   let passwordValida = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[$@$!%*.-?&])([A-Za-z\d$@$!%*.-?&]|[^ ]){8,15}$/;
   let dniValid = /^[XYZ]?\d{5,8}[A-Z]$/i;;
+  let telfValid = /^\d{7,10}$/
   
 
   var formValido = true;
@@ -40,6 +42,13 @@ function validateForm() {
       formValido = false;
   }else{
     document.getElementById("er-mail").innerHTML="";
+  }
+
+  if (!telfValid.test(telf)) {
+    document.getElementById("er-telf").innerHTML="El número telefònic no és vàlid";
+    formValido = false;
+  }else{
+    document.getElementById("er-telf").innerHTML="";
   }
   
   if (!dniValid.test(dni)) {

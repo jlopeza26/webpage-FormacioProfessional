@@ -39,7 +39,7 @@
                     </div>
                 </div>
                 <div class="row">
-                    <h1 class="col-12 text-center">APLICATION<br>LOGIN PAGE</h1>
+                    <h1 class="col-12 text-center">INICIAR<br>SESSIÓ</h1>
                 </div>
             </div>
         </section>

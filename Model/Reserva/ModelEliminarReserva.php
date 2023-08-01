@@ -36,7 +36,7 @@ class EliminarReserva {
         $sql->execute(); 
 
         $id_curs=$row["id_curs"];
-        $sql2 = $this->conn->prepare("UPDATE curs SET placesDisponibles = placesDisponibles+1 WHERE id_curs = ?");
+        $sql2 = $this->conn->prepare("INSERT INTO moviments VALUES (null,?,'cancelar');");
         $sql2->bind_param("s", $id_curs);
         $sql2->execute();
 

@@ -11,14 +11,13 @@ class ModelCursos {
     }
 
     public function mostrarCursos() {
-
-    //Buscar datos del curs
+        // Buscar dades dels cursos
         $sql = $this->conn->prepare("SELECT * FROM curs JOIN img_cursos WHERE img_cursos.id_curs = curs.id_curs"); 
-    // Executem la consulta
+        // Executem la consulta
         $sql->execute();
-    //Obtenim el resultat de la consulta
+        //Obtenim el resultat de la consulta
         $result=$sql->get_result();
-    // Retornem les dades de la consulta
+        // Retornem les dades de la consulta
         return $result;
     }
 }

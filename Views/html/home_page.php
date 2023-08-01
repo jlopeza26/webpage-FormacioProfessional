@@ -16,6 +16,7 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
   <link rel="stylesheet" href="../css/font.css">
   <link rel="stylesheet" href="../css/home_page.css">
+    <link rel="shortcut icon" href="../img/ico-removebg.png" type="image/x-icon">
   <title>Pàgina Principal</title>
 </head>
 
@@ -90,10 +91,7 @@
       </a>
 
       <ul class="nav col-md-4 justify-content-end">
-        <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Pàgina Principal</a></li>
-        <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Cursos</a></li>
-        <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Atenció al client</a></li>
-        <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Sobre nosaltres</a></li>
+        <li class="nav-item"><a href="#" class="nav-link px-2 text-muted"><img id="flecha-arriba" src="../img/arrow-up.svg" alt="arrow-up" height="30px" width="30px"></a></li>
       </ul>
     </footer>
   </div>

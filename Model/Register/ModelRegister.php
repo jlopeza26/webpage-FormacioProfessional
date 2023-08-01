@@ -35,7 +35,16 @@ function register($username, $nom, $cognom, $dni, $email, $numTelf, $password, $
     
     if ($resultUsernameExists->num_rows > 0) {
         $errorExists = 2;
-    }   
+    }
+
+    $stmt3 = $conn->prepare("SELECT dni FROM usuari WHERE dni = ?");
+    $stmt3->bind_param("s", $dni);
+    $stmt3->execute();
+    $resultUsernameExists = $stmt3->get_result();
+
+    if ($resultUsernameExists->num_rows > 0) {
+        $errorExists = 3;
+    }
 
     if($errorExists!=0){
         return $errorExists;

@@ -11,9 +11,10 @@ class ReservasTotals {
     }
 
     public function mostrar_resrves(){
-        $sql=$this->conn->prepare("SELECT reserva.id_reserva, usuari.*, curs.nom_curs FROM reserva 
+        $sql=$this->conn->prepare("SELECT reserva.id_reserva, usuari.*, curs.nom_curs, curs.id_curs FROM reserva 
         JOIN usuari ON reserva.id_usuari = usuari.id_usuari 
         JOIN curs ON reserva.id_curs = curs.id_curs");
+        // $sql->bind_param("s",$id_curs);
         $sql->execute();
         return $sql->get_result();
     }

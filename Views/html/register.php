@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sign Up</title>
+    <title>Registrar-se</title>
     <link rel="shortcut icon" href="../img/ico-removebg.png" type="image/x-icon">
     <!-- bootstrap -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
@@ -20,7 +20,7 @@
         <section class="col-md-6" id="panel-left">
             <div class="container">
                 <div class="row mb-5">
-                    <h2 class="col-12 text-center" style="color:black;">Sign Up</h2>
+                    <h2 class="col-12 text-center" style="color:black;">Registra't</h2>
                     <?php
                         session_start();
                         if(isset($_SESSION["error"]) && $_SESSION["error"] == "emailExists"){
@@ -29,6 +29,10 @@
                         }
                         if(isset($_SESSION["error"]) && $_SESSION["error"] == "usernameExists"){
                             echo "<div class='alert alert-danger col-12 text-center' id='msg-error'>El nom d'usuari no està disponible</div>";
+                            $_SESSION["error"] = "";
+                        }
+                        if(isset($_SESSION["error"]) && $_SESSION["error"] == "dniExists"){
+                            echo "<div class='alert alert-danger col-12 text-center' id='msg-error'>Aquest DNI ja està registrat</div>";
                             $_SESSION["error"] = "";
                         }
                     ?>  
@@ -93,7 +97,7 @@
                 <div class="row mt-5">
                     <div class="col-12 links text-center">
                         <div>
-                            <a href="login.php">Sign In</a>
+                            <a href="login.php">Iniciar sessió</a>
                         </div>        
                     </div>
                 </div>
@@ -111,7 +115,7 @@
                     </div>
                 </div>
                 <div class="row">
-                    <h1 class="col-12 text-center">APLICATION<br>SIGN UP PAGE</h1>
+                    <h1 class="col-12 text-center">APLICACIÓ DE<br>REGISTRE</h1>
                 </div>
             </div>
         </section>

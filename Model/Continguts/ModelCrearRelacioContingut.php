@@ -20,5 +20,4 @@ class ModelCrearRelacioContingut {
         $id_curs= $sql->insert_id;
         return $id_curs;
     }
-
 }

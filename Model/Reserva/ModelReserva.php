@@ -39,6 +39,9 @@ class ReservarCursoModel {
         $_SESSION["reserva"]=1;
       }else if ($tipo_usuari==1){
         $_SESSION["reserva"]=2;
+      } 
+      else if (!isset($_SESSION["usuari"])){
+        $_SESSION["reserva"]=3;
       }
       else{
         $sql1 = $this->conn->prepare("INSERT INTO reserva (id_usuari, id_curs) VALUES (?,?)");
@@ -46,7 +49,7 @@ class ReservarCursoModel {
         $sql1->execute();
     
         //Reducir en 1 el número de plazas disponibles en el curso
-        $sql2 = $this->conn->prepare("UPDATE curs SET placesDisponibles = placesDisponibles-1 WHERE id_curs = ?");
+        $sql2 = $this->conn->prepare("INSERT INTO moviments VALUES (null,?,'reservar');");
         $sql2->bind_param("s", $id_curs);
         $sql2->execute();
         $_SESSION["reserva"]=0;

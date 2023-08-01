@@ -22,6 +22,8 @@ if($registerError == 0) {
         $_SESSION["error"] = "usernameExists";
     } else if($registerError == 1) {
         $_SESSION["error"] = "emailExists";
+    } else if($registerError == 3) {
+        $_SESSION["error"] = "dniExists";
     }
     header("location:../../Views/html/register.php");
 }

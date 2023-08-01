@@ -109,3 +109,7 @@ body {
 }
 
 /* END COOKIES */
+
+#flecha-arriba:hover{
+	content: url("../img/arrow-up-fill.svg");
+}
